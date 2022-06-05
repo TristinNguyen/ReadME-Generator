@@ -22,9 +22,9 @@ function renderLicenseSection(license) {
         case 'ISC':
             badge = '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)'
             break;
-        
+
         default:
-        break;
+            break;
     }
     return badge
 }
@@ -32,22 +32,32 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
     return `# ${data.projectname}
-  Create your own ReadMe, fast and easy
+
   # Description
   ${data.description}
-  # Installation
+  ## Table of Contents
+* [Installation](#description)
+* [Usage](#usage)
+* [License](#license)
+* [Contribution](#contribution)
+* [Test](#test)
+* [Github](#github)
+* [Contact](#contact)
+# Installation
   ${data.installation}
-  # Usage
+# Usage
   ${data.usage}
-  # License
+# License
   ${renderLicenseSection(data.license)}
-  # Contribution
+# Contribution
   ${data.contribution}
-  # Test
+# Test
   ${data.test}
-  # Github
+# Github
   ${data.github}
-  # Contact
+# Contact
+  Please reach out to me here for additional questions on this project!
+
   ${data.contact}
 `;
 }
